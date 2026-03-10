@@ -83,7 +83,6 @@ void get_star_region() {
         NRUN--;
     }
     if(NRUN<0) printf("Error: number runs exceeded max NRUN=%d\n",NRUN);
-\
 
     /* --- Compute necessary star-region values --- */
     uStar = 0.5 * (uLeft + uRight) + 0.5 * ((pStar - pRight) * sqrt(AR/(pStar + BR)) - G4 * cLeft * (pow(pStar/pLeft, G1) - 1.0));
@@ -92,4 +91,5 @@ void get_star_region() {
 
     rhoStarLeft = rhoLeft * pow(pStar/pLeft, 1.0/Gamma);
     rhoStarRight = rhoRight * (pStar/pRight + G6) / (G6 * pStar/pRight + 1.0); // Rankine-Hugoniot Shock Condition
+
 }
